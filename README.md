@@ -9,4 +9,4 @@ ___________                    __________         __________
 
 The Topotoolbox for Python 
 
-*work in profress
+*work in progress
