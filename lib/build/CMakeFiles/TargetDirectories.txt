@@ -1,0 +1,3 @@
+/home/theo/Documents/Praktikum/gradient/lib/build/CMakeFiles/gradient.dir
+/home/theo/Documents/Praktikum/gradient/lib/build/CMakeFiles/edit_cache.dir
+/home/theo/Documents/Praktikum/gradient/lib/build/CMakeFiles/rebuild_cache.dir
