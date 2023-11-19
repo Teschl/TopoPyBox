@@ -8,6 +8,7 @@ cmake_minimum_required(VERSION 3.5)
 
 project(gradient)
 set(CMAKE_C_STANDARD 11)
+
 # Create a shared library from mylibrary.c
 add_library(gradient SHARED gradient.c)
 
