@@ -14,7 +14,7 @@ ___________                    __________         __________
 First Compile the C Code
 
 ```bash
-  cd ./lib/build
+  cd ./build
   cmake ..
   make
 ```
