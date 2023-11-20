@@ -6,7 +6,7 @@
 # CMakeLists.txt
 cmake_minimum_required(VERSION 3.5)
 
-project(gradient)
+project(TopoPyBox)
 set(CMAKE_C_STANDARD 11)
 
 # Create a shared library from mylibrary.c
