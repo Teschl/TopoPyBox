@@ -1,1 +1,0 @@
-/usr/bin/cc -fPIC -shared -Wl,-soname,libgradient.so -o libgradient.so CMakeFiles/gradient.dir/gradient.c.o 

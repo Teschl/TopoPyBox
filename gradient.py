@@ -1,8 +1,12 @@
 import ctypes
 import numpy as np
-
+import os
+skript_verzeichnis = os.path.dirname(os.path.abspath(__file__))
+os.chdir(skript_verzeichnis)
+bibliothek_pfad = os.path.join(skript_verzeichnis, "lib", "build","libgradient.so")
+print(bibliothek_pfad)
 # Load the C library
-example_lib = ctypes.CDLL('/home/theo/Documents/Praktikum/gradient/lib/build/libgradient.so')
+example_lib = ctypes.CDLL(bibliothek_pfad)
 
 # Define the argument and return types for the C function
 example_lib.gradient8.argtypes = [
