@@ -5,7 +5,7 @@ __pycache__/
 .vscode/
 
 # Ignore the contents of the subfolder
-lib/build/*
+build/*
 
 # But include the specific file
-!lib/build/README.md.txt
+!build/README.md.txt
