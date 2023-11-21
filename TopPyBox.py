@@ -6,7 +6,7 @@ os.chdir(script_dir)
 bibliothek_pfad = os.path.join(script_dir, "lib", "gradient","libgradient.so")
 print(bibliothek_pfad)
 # Load the C library
-example_lib = ctypes.CDLL("/Users/domenic/Documents/Praktikum/TopoPyBox/lib/gradient/libgradient.so")
+example_lib = ctypes.CDLL(bibliothek_pfad)
 
 # Define the argument and return types for the C function
 example_lib.gradient8.argtypes = [
