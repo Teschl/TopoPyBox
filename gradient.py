@@ -1,10 +1,12 @@
 import ctypes
 import numpy as np
 import os
+
+# relativen Path finden
 skript_verzeichnis = os.path.dirname(os.path.abspath(__file__))
 os.chdir(skript_verzeichnis)
 bibliothek_pfad = os.path.join(skript_verzeichnis, "lib", "build","libgradient.so")
-print(bibliothek_pfad)
+
 # Load the C library
 example_lib = ctypes.CDLL(bibliothek_pfad)
 
