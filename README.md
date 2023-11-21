@@ -32,3 +32,20 @@ gcc -fPIC -shared -o compiledName.so uncompiledFile.c
 - make
 - cmake
 - ctypes
+
+### informations about the project
+
+we use a typical cmake c++ directory hierarchie
+'''bash
+Projektverzeichnis
+|-- CMakeLists.txt
+|-- src
+|   |-- main.c
+|   |-- mylibrary.c
+|-- include
+|   |-- mylibrary.h
+|-- lib
+|   |-- libmylibrary.so
+|-- build  (nicht im Quellcode-Repository, wird durch CMake erstellt)
+|-- bin    (nicht im Quellcode-Repository, wird durch CMake erstellt)
+'''

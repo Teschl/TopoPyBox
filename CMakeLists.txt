@@ -13,7 +13,6 @@ set(CMAKE_C_STANDARD 11)
 # Füge alle C-Programm-Quelldateien im Verzeichnis 'src' hinzu
 file(GLOB PROGRAM_SOURCES "src/*.c")
 
-
 foreach(program_source ${PROGRAM_SOURCES})
     # bekomme den dateinamen ohne endung
     get_filename_component(program_name ${program_source} NAME_WE)
