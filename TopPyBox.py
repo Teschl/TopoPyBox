@@ -29,7 +29,7 @@ def calculate_matrix_python(input_matrix):
 
 
 
-### Exaple for further function
+### Exaple for further function. Can be overwritten with real functions
 bibliothek_pfad2 = os.path.join(script_dir, "lib","funktion","libfunktion.so")
 print(bibliothek_pfad2)
 example_lib2 = ctypes.CDLL(bibliothek_pfad2)
