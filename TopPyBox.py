@@ -8,9 +8,6 @@ print(bibliothek_pfad)
 # Load the C library
 example_lib = ctypes.CDLL("/Users/domenic/Documents/Praktikum/TopoPyBox/lib/gradient/libgradient.so")
 
-
-
-
 # Define the argument and return types for the C function
 example_lib.gradient8.argtypes = [
     ctypes.c_int,    # rows
@@ -32,7 +29,7 @@ def calculate_matrix_python(input_matrix):
 
 
 
-
+### Exaple for further function
 bibliothek_pfad2 = os.path.join(script_dir, "lib","funktion","libfunktion.so")
 print(bibliothek_pfad2)
 example_lib2 = ctypes.CDLL(bibliothek_pfad2)
@@ -40,4 +37,4 @@ example_lib2.func.argtypes = None
 example_lib2.func.restype = ctypes.c_int
 def hello_world():
     example_lib2.func()
-hello_world()
+hello_world() ## Prof that it works
