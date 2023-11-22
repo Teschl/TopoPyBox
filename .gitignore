@@ -9,3 +9,5 @@ build/*
 
 # But include the specific file
 !build/README.md
+
+!build/compileMexFiles.m
