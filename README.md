@@ -35,8 +35,7 @@ gcc -fPIC -shared -o compiledName.so uncompiledFile.c
 
 ### informations about the project
 
-we use a typical cmake-cpp directory hierarchie with the addition of separate libraries.so 
-
+we use a typical cmake-cpp directory hierarchie with the addition of separate libraries.so
 
 ```bash
 Projektverzeichnis

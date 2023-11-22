@@ -29,12 +29,23 @@ def calculate_matrix_python(input_matrix):
 
 
 
-### Exaple for further function. Can be overwritten with real functions
-bibliothek_pfad2 = os.path.join(script_dir, "lib","funktion","libfunktion.so")
-print(bibliothek_pfad2)
-example_lib2 = ctypes.CDLL(bibliothek_pfad2)
-example_lib2.func.argtypes = None
-example_lib2.func.restype = ctypes.c_int
-def hello_world():
-    example_lib2.func()
-hello_world() ## Prof that it works
+# Load the C library
+lib = ctypes.CDLL("../src/build/libaspect.so")
+
+# Define the argument and return types for the C function
+lib.aspect.argtypes = [
+    ctypes.c_int,    # rows
+    ctypes.c_int,    # cols
+    np.ctypeslib.ndpointer(dtype=np.float32, flags='C_CONTIGUOUS'),     # input Matrix
+    np.ctypeslib.ndpointer(dtype=np.float32, flags='C_CONTIGUOUS')      # output Matrix
+]
+lib.aspect.restype = None
+
+def aspect(input_matrix):
+    rows, cols = input_matrix.shape
+    output_matrix = np.zeros_like(input_matrix)
+
+    # Call the C function
+    lib.aspect(rows, cols, input_matrix, output_matrix)
+
+    return output_matrix
