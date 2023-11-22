@@ -8,4 +8,4 @@ __pycache__/
 build/*
 
 # But include the specific file
-!build/README.md.txt
+!build/README.md
