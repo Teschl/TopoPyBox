@@ -1,6 +1,8 @@
 import ctypes
 import numpy as np
 import os
+
+#finds relative path to the dynamic library
 script_dir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(script_dir)
 bibliothek_pfad = os.path.join(script_dir, "lib", "gradient","libgradient.so")
