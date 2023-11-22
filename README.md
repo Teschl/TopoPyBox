@@ -9,45 +9,39 @@ ___________                    __________         __________
                |__|                       \/              \/            \/
 ```
 
-## How to execute
+## How to compile
 
-First Compile the C Code
+### Compile the src/dateiname.c
 
-```bash
-  cd ./build
-  cmake ..
-  make
-```
-
-Now the Python Scrips can use the C Code
-
-### Manual Compiling
+Compiling all Files at once
 
 ```bash
-gcc -fPIC -shared -o compiledName.so uncompiledFile.c
+  ~$ cd build
+  ~$ cmake ..
+  ~$ make
 ```
 
-### requirements
+Compmile a single file
+
+```bash
+  ~$ gcc -fPIC -shared -o compiledName.so uncompiledFile.c
+```
+
+### Compile the toolBox/mex_dateiname.c
+
+In MATLAB mit dem Terminal
+
+```bash
+  ~$ mex toolBox/dateiname.c
+```
+
+## Example Scripts
+
+Either run the .m File in MATLAB or run the Jupyter Notebook
+
+## requirements
 
 - make
 - cmake
 - ctypes
-
-### informations about the project
-
-we use a typical cmake-cpp directory hierarchie with the addition of separate libraries.so 
-
-
-```bash
-Projektverzeichnis
-|-- CMakeLists.txt
-|-- src
-|   |-- main.c
-|   |-- mylibrary.c
-|-- include
-|   |-- mylibrary.h
-|-- lib
-|   |-- libmylibrary.so
-|-- build  (nicht im Quellcode-Repository, wird durch CMake erstellt)
-|-- bin    (nicht im Quellcode-Repository, wird durch CMake erstellt)
-```
+- MATLAB
