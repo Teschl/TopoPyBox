@@ -8,6 +8,6 @@ __pycache__/
 build/*
 
 # But include the specific file
-!build/README.md
+!build/placeholder.txt
 
 !build/compileMexFiles.m

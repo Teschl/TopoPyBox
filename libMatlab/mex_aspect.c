@@ -1,10 +1,11 @@
 #include "mex.h"
+#include "aspect.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <stdint.h>
 
-void aspect(int rows, int cols, float *input, float *output);
+//void aspect(int rows, int cols, float *input, float *output);
 
 void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[]) {
     // Variable definitions
