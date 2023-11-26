@@ -9,5 +9,3 @@ build/*
 
 # But include the specific file
 !build/placeholder.txt
-
-!build/compileMexFiles.m
