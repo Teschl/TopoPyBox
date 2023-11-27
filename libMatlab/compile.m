@@ -1,4 +1,4 @@
-% compile example.c
+% how to add compilation of example.c
 % mex -outdir ./libMatlab/ -I../include/ ./libMatlab/example.c ./src/example.c
 
 % compile aspect.c
