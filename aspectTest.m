@@ -4,6 +4,8 @@ inputMatrix = [
     3, 4, 6, 7, 10;
     5, 6, 8, 9, 11;
     5, 6, 7, 8, 10];
+
+inputMatrix = single(inputMatrix);
     
 outputMatrix = mex_aspect(inputMatrix);
 disp('Input Matrix:');
