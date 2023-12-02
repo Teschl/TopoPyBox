@@ -5,8 +5,10 @@ inputMatrix = [
     5, 6, 8, 9, 11;
     5, 6, 7, 8, 10];
 
+% Da mit floats gerechent wird (float = single)
 inputMatrix = single(inputMatrix);
     
+% mex_aspect wird aufgerufen mit Matrix (Datentyp float)
 outputMatrix = mex_aspect(inputMatrix);
 disp('Input Matrix:');
 disp(inputMatrix);

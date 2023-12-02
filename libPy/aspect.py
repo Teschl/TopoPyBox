@@ -9,6 +9,8 @@ bibliothek_pfad = os.path.join(script_dir, "lib", "aspect","libaspect.so")
 
 # Load the C library
 # lib = ctypes.CDLL(bibliothek_pfad)
+
+# Hier muss noch ein relativer Pfad eingefügt werden!
 lib = ctypes.CDLL("/home/theo/Documents/Praktikum/TopoPyBox/lib/aspect/libaspect.so")
 
 # Define the argument and return types for the C function

@@ -1,0 +1,1 @@
+% Da eignetlich eine .m aufgerufen wird, gier muss dann die .mex aufgerufen werden.
