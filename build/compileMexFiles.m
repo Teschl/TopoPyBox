@@ -5,7 +5,7 @@
 %%%  mex -outdir ./libMatlab/ -I../include/ ./libMatlab/<mexFileName>.c ./src/<cFileName>.c
 
 % compile aspect.c
-mex -outdir ../libMatlab/ -I../include ../libMatlab/mex_aspect.c ../src/aspect.c
+mex -outdir ../libMatlab/ -I../include ../libMatlab/mex_aspect.c ../Core/GridObj/aspect.c
 
 % done
 fprintf('All source files compiled.\n');
