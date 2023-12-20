@@ -10,7 +10,7 @@ project(TopoPyBox)
 set(CMAKE_C_STANDARD 11)
 
 # Füge alle C-Programm-Quelldateien im Verzeichnis 'src' hinzu
-file(GLOB PROGRAM_SOURCES "src/*.c")
+file(GLOB PROGRAM_SOURCES "Core/GridObj/*.c")
 
 foreach(program_source ${PROGRAM_SOURCES})
     # bekomme den dateinamen ohne endung
@@ -25,14 +25,5 @@ foreach(program_source ${PROGRAM_SOURCES})
     # Füge den Include-Pfad für Header-Dateien hinzu (falls benötigt)
     target_include_directories(${program_name} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-
 endforeach()
-
-
-#### Matlab ####
-# Füge die Header-Datei und die C-Quelldatei hinzu
-set(SOURCE_FILES
-    src/aspect.c
-    libMatlab/Mex_aspect.c
-)
 
