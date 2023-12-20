@@ -1,6 +1,9 @@
 # Ignore Python cache files
 __pycache__/
 
+# Ignore compiled binaries in lib
+!lib/*
+
 # Ignore Visual Studio Code settings
 .vscode/
 
