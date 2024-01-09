@@ -9,9 +9,9 @@ ___________                    __________         __________
                |__|                       \/              \/            \/
 ```
 
-## How to execute
+## How compile for Python
 
-First Compile the C Code
+First Compile the C Code in Terminal
 
 ```bash
   cd ./build
@@ -19,7 +19,21 @@ First Compile the C Code
   make
 ```
 
-Now the Python Scrips can use the C Code
+Now the Python Scrips can use the function written in C
+
+## How to compile for Matlab 
+
+in Terminal
+```bash
+  cd ./build
+  cmake ..
+  make
+```
+
+in Matlab run
+```bash
+  compileMexFiles.m
+```
 
 ### Manual Compiling
 
@@ -35,18 +49,24 @@ gcc -fPIC -shared -o compiledName.so uncompiledFile.c
 
 ### informations about the project
 
-we use a typical cmake-cpp directory hierarchie with the addition of separate libraries.so
+We use a typical cmake-cpp directory hierarchie with the addition of lib (equivalent of bin directory), libMatlab(for matlab conversion and inclusion in Matlab scripts) and libPython(for inclusion in a python scripts). Out of convenience we made a separate repository for the core source files, hence other Toolboxes with different programmming languages use the same source files and we prefere a united source code for all languages.
 
 ```bash
 Projektverzeichnis
 |-- CMakeLists.txt
-|-- src
-|   |-- main.c
-|   |-- mylibrary.c
+|-- Core
+|   |-- GridObj
+|        |-- aspect.c 
+|   |-- FlowObj
+|        |-- bla.c
 |-- include
-|   |-- mylibrary.h
-|-- lib
+|   |-- aspect.h
+|-- lib 
 |   |-- libmylibrary.so
-|-- build  (nicht im Quellcode-Repository, wird durch CMake erstellt)
-|-- bin    (nicht im Quellcode-Repository, wird durch CMake erstellt)
+|-- libMatlab
+|   |-- mexAspect.c
+|   |-- mexAspect.mexmaca64
+|-- libPython
+|   |-- aspect.py 
+|-- build
 ```
