@@ -36,15 +36,7 @@ in Matlab run
 gcc -fPIC -shared -o compiledName.so uncompiledFile.c
 ```
 
-### requirements
-
-- make
-- cmake
-- ctypes
-
 ### informations about the project
-
-We use a typical cmake-cpp directory hierarchie with the addition of lib (equivalent of bin directory), libMatlab(for matlab conversion and inclusion in Matlab scripts) and libPython(for inclusion in a python scripts). Out of convenience we made a separate repository for the core source files, hence other Toolboxes with different programmming languages use the same source files and we prefere a united source code for all languages.
 
 ```bash
 TopoToolBox
