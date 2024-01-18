@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -shared  -o compiled/GRIDobj/libgradient8.so CMakeFiles/gradient8.dir/GRIDobj/gradient8.c.o 
