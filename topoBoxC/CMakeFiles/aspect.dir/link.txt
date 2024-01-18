@@ -1,1 +1,0 @@
-/usr/bin/cc -fPIC -shared  -o compiled/GRIDobj/libaspect.so CMakeFiles/aspect.dir/GRIDobj/aspect.c.o 

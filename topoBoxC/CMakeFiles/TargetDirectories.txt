@@ -1,4 +1,0 @@
-/home/theo/Documents/Praktikum/topoBoxC/CMakeFiles/aspect.dir
-/home/theo/Documents/Praktikum/topoBoxC/CMakeFiles/gradient8.dir
-/home/theo/Documents/Praktikum/topoBoxC/CMakeFiles/edit_cache.dir
-/home/theo/Documents/Praktikum/topoBoxC/CMakeFiles/rebuild_cache.dir
