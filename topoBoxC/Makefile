@@ -155,6 +155,19 @@ gradient8/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gradient8.dir/build.make CMakeFiles/gradient8.dir/build
 .PHONY : gradient8/fast
 
+#=============================================================================
+# Target rules for targets named identifyflats
+
+# Build rule for target.
+identifyflats: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 identifyflats
+.PHONY : identifyflats
+
+# fast build rule for target.
+identifyflats/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/identifyflats.dir/build.make CMakeFiles/identifyflats.dir/build
+.PHONY : identifyflats/fast
+
 GRIDobj/andGrid.o: GRIDobj/andGrid.c.o
 .PHONY : GRIDobj/andGrid.o
 
@@ -227,6 +240,30 @@ GRIDobj/gradient8.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gradient8.dir/build.make CMakeFiles/gradient8.dir/GRIDobj/gradient8.c.s
 .PHONY : GRIDobj/gradient8.c.s
 
+GRIDobj/identifyflats.o: GRIDobj/identifyflats.c.o
+.PHONY : GRIDobj/identifyflats.o
+
+# target to build an object file
+GRIDobj/identifyflats.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/identifyflats.dir/build.make CMakeFiles/identifyflats.dir/GRIDobj/identifyflats.c.o
+.PHONY : GRIDobj/identifyflats.c.o
+
+GRIDobj/identifyflats.i: GRIDobj/identifyflats.c.i
+.PHONY : GRIDobj/identifyflats.i
+
+# target to preprocess a source file
+GRIDobj/identifyflats.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/identifyflats.dir/build.make CMakeFiles/identifyflats.dir/GRIDobj/identifyflats.c.i
+.PHONY : GRIDobj/identifyflats.c.i
+
+GRIDobj/identifyflats.s: GRIDobj/identifyflats.c.s
+.PHONY : GRIDobj/identifyflats.s
+
+# target to generate assembly for a file
+GRIDobj/identifyflats.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/identifyflats.dir/build.make CMakeFiles/identifyflats.dir/GRIDobj/identifyflats.c.s
+.PHONY : GRIDobj/identifyflats.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -238,6 +275,7 @@ help:
 	@echo "... andGrid"
 	@echo "... aspect"
 	@echo "... gradient8"
+	@echo "... identifyflats"
 	@echo "... GRIDobj/andGrid.o"
 	@echo "... GRIDobj/andGrid.i"
 	@echo "... GRIDobj/andGrid.s"
@@ -247,6 +285,9 @@ help:
 	@echo "... GRIDobj/gradient8.o"
 	@echo "... GRIDobj/gradient8.i"
 	@echo "... GRIDobj/gradient8.s"
+	@echo "... GRIDobj/identifyflats.o"
+	@echo "... GRIDobj/identifyflats.i"
+	@echo "... GRIDobj/identifyflats.s"
 .PHONY : help
 
 

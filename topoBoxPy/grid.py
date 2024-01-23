@@ -8,12 +8,14 @@ from .grid_mixins.imagesc import ImagescMixin
 from .grid_mixins.info import InfoMixin
 from .grid_mixins.gradient8 import Gradient8Mixin
 from .grid_mixins.andGrid import AndGridMixin
+from .grid_mixins.identifyflats import Identifyflats
 
 class Grid(AspectMixin,
            ImagescMixin,
            InfoMixin,
            Gradient8Mixin,
-           AndGridMixin):
+           AndGridMixin,
+           Identifyflats):
 
     def __init__(self, path):
         # path: path of .tif file
@@ -31,9 +33,3 @@ class Grid(AspectMixin,
         self.columns = tiff.width
         self.cellsize = tiff.res[0]
         self.georef = [tiff.bounds, tiff.transform]
-
-        # Example for metadata with: tiff.profile
-        # alternative of reading with Image
-
-        # self.z = np.array(Image.open(path))
-        
