@@ -5,7 +5,7 @@ import os
 
 # find .so file that contains c func
 dirname = os.path.dirname(__file__)
-filename = os.path.join(dirname, './private/aspect.so')
+filename = os.path.join(dirname, './private/libaspect.so')
 lib = ctypes.CDLL(filename)
 
 # Define the argument and return types for the C function

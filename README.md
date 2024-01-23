@@ -16,7 +16,7 @@ Now move the .so files to the "private" folders in topoBoxPy
 
 ## How to compile for Matlab
 
-Veraltet!
+**Veraltet!**
 
 ```bash
   cd ./Bulid

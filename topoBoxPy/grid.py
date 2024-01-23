@@ -7,11 +7,13 @@ from .grid_mixins.aspect import AspectMixin
 from .grid_mixins.imagesc import ImagescMixin
 from .grid_mixins.info import InfoMixin
 from .grid_mixins.gradient8 import Gradient8Mixin
+from .grid_mixins.andGrid import AndGridMixin
 
 class Grid(AspectMixin,
            ImagescMixin,
            InfoMixin,
-           Gradient8Mixin):
+           Gradient8Mixin,
+           AndGridMixin):
 
     def __init__(self, path):
         # path: path of .tif file

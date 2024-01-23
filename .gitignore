@@ -3,6 +3,7 @@ topoBoxPy/__pycache__/
 topoBoxPy/flow_mixins/__pycache__/
 topoBoxPy/grid_mixins/__pycache__/
 topoBoxPy/stream_mixins/__pycache__/
+__pycache__/
 
 # ignore Visual Studio Code settings
 .vscode/

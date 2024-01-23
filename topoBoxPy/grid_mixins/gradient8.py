@@ -5,7 +5,7 @@ import os
 
 # find .so file that contains c func
 dirname = os.path.dirname(__file__)
-filename = os.path.join(dirname, './private/gradient8.so')
+filename = os.path.join(dirname, './private/libgradient8.so')
 lib = ctypes.CDLL(filename)
 
 # define parameters for opening c file:
@@ -20,7 +20,7 @@ lib.gradient8.argtypes = [
 lib.gradient8.restype = None
 
 class Gradient8Mixin:
-    # später geren mit unit* damit 
+    # später dann mit *unit damit liste von eingaben! 
     def gradient8(self, unit="tan"):
         # get z of object got get inputmatrix in float32
         input_matrix = self.z
