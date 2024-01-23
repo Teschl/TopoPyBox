@@ -9,9 +9,11 @@ from .grid_mixins.info import InfoMixin
 from .grid_mixins.gradient8 import Gradient8Mixin
 from .grid_mixins.andGrid import AndGridMixin
 from .grid_mixins.identifyflats import Identifyflats
+from .grid_mixins.imageschs import Imageschsmixin
 
 class Grid(AspectMixin,
            ImagescMixin,
+           Imageschsmixin,
            InfoMixin,
            Gradient8Mixin,
            AndGridMixin,

@@ -21,16 +21,16 @@ class Identifyflats:
 
         input_matrix = self.z.astype(np.float32)
         flats_matrix = np.zeros_like(input_matrix)
-        stills_matrix = np.zeros_like(input_matrix)
+        sills_matrix = np.zeros_like(input_matrix)
         rows, cols = input_matrix.shape
 
-        lib.identifyflats(rows, cols, input_matrix, flats_matrix, stills_matrix)
+        lib.identifyflats(rows, cols, input_matrix, flats_matrix, sills_matrix)
 
         flats = copy.copy(self)
         flats.z = flats_matrix
 
-        stills = copy.copy(self)
-        stills.z = stills_matrix 
+        sills = copy.copy(self)
+        sills.z = sills_matrix 
 
-        return flats, stills
+        return flats, sills
     
