@@ -4,7 +4,7 @@
 #include <stdint.h>
 #include <string.h>
 
-void gradient8(int rows, int cols, float *input1, float *input2, float *output)
+void andGrid(int rows, int cols, float *input1, float *input2, float *output)
 {
     for(int i = 0; i < cols*rows; i++)
     {

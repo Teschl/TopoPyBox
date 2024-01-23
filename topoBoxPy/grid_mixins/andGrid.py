@@ -9,14 +9,14 @@ filename = os.path.join(dirname, './private/libandGrid.so')
 lib = ctypes.CDLL(filename)
 
 # set variables
-lib.libandGrid.argtypes = [
+lib.andGrid.argtypes = [
     ctypes.c_int,   # rows
     ctypes.c_int,   # cols
     np.ctypeslib.ndpointer(dtype=np.float32, flags='C_CONTIGUOUS'),     # input Matrix 1
     np.ctypeslib.ndpointer(dtype=np.float32, flags='C_CONTIGUOUS'),     # input Matrix 2
     np.ctypeslib.ndpointer(dtype=np.float32, flags='C_CONTIGUOUS'),     # output Matrix
 ]
-lib.libandGrid.restype = None
+lib.andGrid.restype = None
 
 class AndGridMixin:
     def andGrid(self, grid):
@@ -27,7 +27,7 @@ class AndGridMixin:
         rows, cols = input_matrix1.shape
 
         # call c function
-        lib.libandGrid(rows, cols, input_matrix1, input_matrix2, output_matrix)
+        lib.andGrid(rows, cols, input_matrix1, input_matrix2, output_matrix)
 
         # copy object witch new z and return
         copy_self = copy.copy(self)

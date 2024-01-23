@@ -14,8 +14,8 @@ lib.gradient8.argtypes = [
     ctypes.c_int,   # cols
     np.ctypeslib.ndpointer(dtype=np.float32, flags='C_CONTIGUOUS'),     # input Matrix
     np.ctypeslib.ndpointer(dtype=np.float32, flags='C_CONTIGUOUS'),     # output Matrix
-    ctypes.c_int,
-    ctypes.c_float
+    ctypes.c_int,   # unit
+    ctypes.c_float  # distance
 ]
 lib.gradient8.restype = None
 
