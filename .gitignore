@@ -14,6 +14,3 @@ topoBoxPy/topoBoxPy.egg-info
 topoBoxC/CMakeFiles/
 topoBoxC/cmake_install.cmake
 topoBoxC/CMakeCache.txt
-
-# ignore folder that holds all compiled files
-topoBoxC/compiled/

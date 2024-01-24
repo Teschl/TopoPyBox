@@ -2,7 +2,6 @@ import ctypes
 import numpy as np
 import copy
 import os
-import time
 
 # find .so file that contains c func
 dirname = os.path.dirname(__file__)
@@ -50,5 +49,5 @@ class Gradient8Mixin:
         # copy object which new z and return
         copy_self = copy.copy(self)
         copy_self.z = output_matrix.copy()
-        print(len(np.unique(output_matrix)))
+        
         return copy_self
