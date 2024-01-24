@@ -1,10 +1,28 @@
 # TopoToolBox
 
-## in Python, R, MATLAB using C
+## in Python, R and MATLAB using C
 
-## How compile for Python
+## How to install
 
-First Compile the C Code in Terminal
+### Installing the Python package
+
+Install the package from local files using pip.
+
+```bash
+cd path/to/project/topoBoxPy
+pip install -e .
+```
+
+or keep the package in the same folder as your script
+
+```bash
+some_folder
+├── topoBoxPy
+├── your_script.ipynb
+└── your_script.py
+```
+
+## How compile C code for Python
 
 ```bash
   cd ./topoBoxC
@@ -12,7 +30,11 @@ First Compile the C Code in Terminal
   make
 ```
 
-Now move the .so files to the "private" folders in topoBoxPy
+or maunally for single files
+
+```bash
+gcc -fPIC -shared -o compiled_name.so uncompiled_file.c
+```
 
 ## How to compile for Matlab
 
@@ -30,13 +52,7 @@ in Matlab run
   compileMexFiles.m
 ```
 
-### Manual Compiling
-
-```bash
-gcc -fPIC -shared -o compiledName.so uncompiledFile.c
-```
-
-### informations about the project
+### general information about the project
 
 ```bash
 TopoToolBox
