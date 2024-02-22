@@ -1,3 +1,3 @@
-from .grid import Grid
-from .flow import Flow
-from .stream import Stream
+from .grid import GridObject
+from .flow import FlowObject
+from .stream import StreamObject

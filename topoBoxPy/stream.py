@@ -1,4 +1,4 @@
 from .stream_mixins.test import TestMixin
 
-class Stream(TestMixin):
+class StreamObject(TestMixin):
     pass

@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+from matplotlib.colors import LightSource
 
 '''
 .imageschs() plot hillshade image 
@@ -21,11 +22,16 @@ Parameter/Value Pairs:
     colorbarlabel   string, title for colorbar
 
 Output:
-
 '''
 
-class Imageschsmixin:
+class ImageschsMixin:
     def imageschs(self, *arguments):
+
+        elevation_data = np.random.random((10, 10))
+
+        light_source = LightSource(azdeg=315, altdeg=45)
+
+        hillshade = light_source.hillshade(elevation_data)
 
         plt.imshow(self.z, cmap='terrain', interpolation='nearest')
 
@@ -33,10 +39,11 @@ class Imageschsmixin:
             if element == "caxis":
                 continue
             elif element == "colorbar":
-                plt.colorbar()
+                if arguments[i+1] in ["True","1","true"]:
+                    colorbar = plt.colorbar()
                 continue
             elif element == "colorbarlabel":
-                plt.colorbar(label=arguments[i+1])
+                colorbar = plt.colorbar(label=arguments[i+1])
                 continue
             elif element == "colorbarylabel":
                 continue
@@ -76,35 +83,3 @@ class Imageschsmixin:
             
             plt.show()
             
-
-
-
-
-
-
-'''
-Konzept für später:
-
-def imageschs(self, *arguments):
-    actions = {
-        "caxis": lambda: None,  # Replace with the appropriate action
-        "colorbar": plt.colorbar,
-        "colorbarlabel": lambda label: plt.colorbar(label=label),
-        "colorbarylabel": lambda: None,  # Replace with the appropriate action
-        "colormap": lambda: None,  # Replace with the appropriate action
-        "percentclip": lambda: None,  # Replace with the appropriate action
-        "truecolor": lambda: None,  # Replace with the appropriate action
-        "falsecolor": lambda: None,  # Replace with the appropriate action
-        "nancolor": lambda: None,  # Replace with the appropriate action
-        "brighten": lambda: None,  # Replace with the appropriate action
-        "usepermanent": lambda: None,  # Replace with the appropriate action
-    }
-
-    for i, element in enumerate(arguments):
-        if element in actions:
-            action = actions[element]
-            if len(action.__code__.co_varnames) == 1:  # Check the number of parameters the function takes
-                action(arguments[i+1])
-            else:
-                action()
-'''
