@@ -10,9 +10,9 @@ lib = ctypes.CDLL(filename)
 lib.identifyflats.argtypes = [
     ctypes.c_int,   # rows
     ctypes.c_int,   # cols
-    np.ctypeslib.ndpointer(dtype=np.float32, flags='C_CONTIGUOUS'),     # input Matrix 
-    np.ctypeslib.ndpointer(dtype=np.float32, flags='C_CONTIGUOUS'),     # output Matrix 1
-    np.ctypeslib.ndpointer(dtype=np.float32, flags='C_CONTIGUOUS'),     # output Matrix 2
+    np.ctypeslib.ndpointer(dtype=np.float32, flags='C_CONTIGUOUS'),     # input Matrix     
+    np.ctypeslib.ndpointer(dtype=np.bool_, flags='C_CONTIGUOUS'),     # output Matrix 1
+    np.ctypeslib.ndpointer(dtype=np.bool_, flags='C_CONTIGUOUS'),     # output Matrix 2
 ]
 lib.identifyflats.restype = None
 
@@ -20,8 +20,8 @@ class Identifyflats:
     def identifyflats(self):
 
         input_matrix = self.z.astype(np.float32)
-        flats_matrix = np.zeros_like(input_matrix)
-        sills_matrix = np.zeros_like(input_matrix)
+        flats_matrix = np.zeros_like(input_matrix, dtype=bool)
+        sills_matrix = np.zeros_like(input_matrix, dtype=bool)
         rows, cols = input_matrix.shape
 
         lib.identifyflats(rows, cols, input_matrix, flats_matrix, sills_matrix)
