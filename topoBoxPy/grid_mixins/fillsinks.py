@@ -30,6 +30,6 @@ class FillsinksMixin:
         lib.fillsinks(rows, cols, input_matrix, output_matrix)
 
         copy_self = copy.copy(self)
-        copy_self.z = output_matrix.copy()
+        copy_self.z = input_matrix.copy()
         
         return copy_self
