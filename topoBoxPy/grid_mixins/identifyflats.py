@@ -16,7 +16,7 @@ lib.identifyflats.argtypes = [
 ]
 lib.identifyflats.restype = None
 
-class Identifyflats:
+class IdentifyflatsMixin:
     def identifyflats(self):
 
         input_matrix = self.z.astype(np.float32)

@@ -143,6 +143,19 @@ aspect/fast:
 .PHONY : aspect/fast
 
 #=============================================================================
+# Target rules for targets named fillsinks
+
+# Build rule for target.
+fillsinks: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fillsinks
+.PHONY : fillsinks
+
+# fast build rule for target.
+fillsinks/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fillsinks.dir/build.make CMakeFiles/fillsinks.dir/build
+.PHONY : fillsinks/fast
+
+#=============================================================================
 # Target rules for targets named gradient8
 
 # Build rule for target.
@@ -216,6 +229,30 @@ GRIDobj/aspect.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/aspect.dir/build.make CMakeFiles/aspect.dir/GRIDobj/aspect.c.s
 .PHONY : GRIDobj/aspect.c.s
 
+GRIDobj/fillsinks.o: GRIDobj/fillsinks.c.o
+.PHONY : GRIDobj/fillsinks.o
+
+# target to build an object file
+GRIDobj/fillsinks.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fillsinks.dir/build.make CMakeFiles/fillsinks.dir/GRIDobj/fillsinks.c.o
+.PHONY : GRIDobj/fillsinks.c.o
+
+GRIDobj/fillsinks.i: GRIDobj/fillsinks.c.i
+.PHONY : GRIDobj/fillsinks.i
+
+# target to preprocess a source file
+GRIDobj/fillsinks.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fillsinks.dir/build.make CMakeFiles/fillsinks.dir/GRIDobj/fillsinks.c.i
+.PHONY : GRIDobj/fillsinks.c.i
+
+GRIDobj/fillsinks.s: GRIDobj/fillsinks.c.s
+.PHONY : GRIDobj/fillsinks.s
+
+# target to generate assembly for a file
+GRIDobj/fillsinks.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fillsinks.dir/build.make CMakeFiles/fillsinks.dir/GRIDobj/fillsinks.c.s
+.PHONY : GRIDobj/fillsinks.c.s
+
 GRIDobj/gradient8.o: GRIDobj/gradient8.c.o
 .PHONY : GRIDobj/gradient8.o
 
@@ -274,6 +311,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... andGrid"
 	@echo "... aspect"
+	@echo "... fillsinks"
 	@echo "... gradient8"
 	@echo "... identifyflats"
 	@echo "... GRIDobj/andGrid.o"
@@ -282,6 +320,9 @@ help:
 	@echo "... GRIDobj/aspect.o"
 	@echo "... GRIDobj/aspect.i"
 	@echo "... GRIDobj/aspect.s"
+	@echo "... GRIDobj/fillsinks.o"
+	@echo "... GRIDobj/fillsinks.i"
+	@echo "... GRIDobj/fillsinks.s"
 	@echo "... GRIDobj/gradient8.o"
 	@echo "... GRIDobj/gradient8.i"
 	@echo "... GRIDobj/gradient8.s"
