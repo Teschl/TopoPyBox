@@ -117,19 +117,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named andGrid
-
-# Build rule for target.
-andGrid: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 andGrid
-.PHONY : andGrid
-
-# fast build rule for target.
-andGrid/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/andGrid.dir/build.make CMakeFiles/andGrid.dir/build
-.PHONY : andGrid/fast
-
-#=============================================================================
 # Target rules for targets named aspect
 
 # Build rule for target.
@@ -180,30 +167,6 @@ identifyflats: cmake_check_build_system
 identifyflats/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/identifyflats.dir/build.make CMakeFiles/identifyflats.dir/build
 .PHONY : identifyflats/fast
-
-GRIDobj/andGrid.o: GRIDobj/andGrid.c.o
-.PHONY : GRIDobj/andGrid.o
-
-# target to build an object file
-GRIDobj/andGrid.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/andGrid.dir/build.make CMakeFiles/andGrid.dir/GRIDobj/andGrid.c.o
-.PHONY : GRIDobj/andGrid.c.o
-
-GRIDobj/andGrid.i: GRIDobj/andGrid.c.i
-.PHONY : GRIDobj/andGrid.i
-
-# target to preprocess a source file
-GRIDobj/andGrid.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/andGrid.dir/build.make CMakeFiles/andGrid.dir/GRIDobj/andGrid.c.i
-.PHONY : GRIDobj/andGrid.c.i
-
-GRIDobj/andGrid.s: GRIDobj/andGrid.c.s
-.PHONY : GRIDobj/andGrid.s
-
-# target to generate assembly for a file
-GRIDobj/andGrid.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/andGrid.dir/build.make CMakeFiles/andGrid.dir/GRIDobj/andGrid.c.s
-.PHONY : GRIDobj/andGrid.c.s
 
 GRIDobj/aspect.o: GRIDobj/aspect.c.o
 .PHONY : GRIDobj/aspect.o
@@ -309,14 +272,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... andGrid"
 	@echo "... aspect"
 	@echo "... fillsinks"
 	@echo "... gradient8"
 	@echo "... identifyflats"
-	@echo "... GRIDobj/andGrid.o"
-	@echo "... GRIDobj/andGrid.i"
-	@echo "... GRIDobj/andGrid.s"
 	@echo "... GRIDobj/aspect.o"
 	@echo "... GRIDobj/aspect.i"
 	@echo "... GRIDobj/aspect.s"
