@@ -14,3 +14,6 @@ topoBoxPy/topoBoxPy.egg-info
 topoBoxC/CMakeFiles/
 topoBoxC/cmake_install.cmake
 topoBoxC/CMakeCache.txt
+
+# ignore lage test tif file
+test_files/himalaya.tif

@@ -18,7 +18,14 @@ lib.fillsinks.argtypes = [
 lib.fillsinks.restype = None
 
 class FillsinksMixin:
-    def fillsinks(self):
+    def fillsinks(self, *args, **kwargs):
+        # handle arguments
+        if 'maxdepth' in kwargs:
+            maxdepth = kwargs['maxdepth']
+        if 'sinks' in kwargs:
+            sinks = kwargs['sinks']
+        if 'option' in kwargs:
+            option = kwargs['option']
 
         # prepare arguments for c function
         input_matrix = self.z
