@@ -1,6 +1,5 @@
 import numpy as np
 import copy
-import math
 
 # These are not really python magic functions, but they
 # are short and dont each require an file on their own.
