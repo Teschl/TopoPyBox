@@ -1,13 +1,17 @@
 import matplotlib.pyplot as plt
-from matplotlib.ticker import ScalarFormatter
-
+from matplotlib import colormaps
 
 class ImagescMixin:
-    def imagesc(self):
-        plt.imshow(self.z, cmap='terrain', interpolation='nearest')
-        
-        #color_bar = plt.colorbar()
+    def imagesc(self, **kwargs):
+        # select colormap from plt colormaps
+        if 'colormap' in kwargs:
+            if kwargs['colormap'] in colormaps:
+                colormap = kwargs['colormap']
+            else:
+                raise ValueError("Choose from the matplotlib colormap options.")
+        else:
+            colormap = 'gist_earth'
+
+        plt.imshow(self.z, cmap=colormap, interpolation='nearest')
         plt.colorbar()
-        #color_bar.formatter.set_useMathText(False)
-        #color_bar.update_ticks()
         plt.show()
