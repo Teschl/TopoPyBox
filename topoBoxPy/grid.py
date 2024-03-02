@@ -9,6 +9,7 @@ from .grid_mixins.magicfunctions import MagicFunctionsMixin
 from .grid_mixins.identifyflats import IdentifyflatsMixin
 from .grid_mixins.imageschs import ImageschsMixin
 from .grid_mixins.fillsinks import FillsinksMixin
+from .grid_mixins.hillshade import HillshadeMixin
 
 class GridObject(AspectMixin,
            ImagescMixin,
@@ -17,6 +18,7 @@ class GridObject(AspectMixin,
            Gradient8Mixin,
            MagicFunctionsMixin,
            FillsinksMixin,
+           HillshadeMixin,
            IdentifyflatsMixin):
 
     def __init__(self, path):
