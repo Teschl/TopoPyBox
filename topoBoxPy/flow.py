@@ -9,21 +9,10 @@ from .flow_mixins.test import TestMixin
 class FlowObject(TestMixin):
     def __init__(self, DEM, **kwargs):
         # evaluate kwargs
-        preprocess = 'carve'
-        internaldrainage = False
-        cweight = 1
-        verbose = False
-
-        if 'preprocess' in kwargs:
-            preprocess = kwargs['preprocess']
-        if 'sinks' in kwargs:
-            sinks = kwargs['sinks']
-        if 'internaldrainage' in kwargs:
-            internaldrainage = bool(kwargs['internaldrainage'])
-        if 'cweight' in kwargs:
-            cweight = int(kwargs['cweight'])
-        if 'verbose' in kwargs:
-            verbose = bool(kwargs['verbose'])
+        preprocess = kwargs.get("preprocess", 'carve')
+        internaldrainage = kwargs.get("internaldrainage", False)
+        cweight = kwargs.get("cweight", 1)
+        verbose = kwargs.get("verbose", False)
 
         # get properties from DEM
         if isinstance(DEM, GridObject):

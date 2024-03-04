@@ -34,6 +34,8 @@ class GridObject(AspectMixin,
         self.rows = tiff.height
         self.columns = tiff.width
         self.cellsize = tiff.res[0]
+        unit = tiff.profile.get("units")
+        self.unit = unit
         self.georef = [tiff.bounds, tiff.transform]
 
 

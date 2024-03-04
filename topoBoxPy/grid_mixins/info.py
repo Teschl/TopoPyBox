@@ -1,3 +1,5 @@
+import numpy as np
+
 class InfoMixin:
     def info(self):
         print("name: " , self.name)
@@ -5,10 +7,10 @@ class InfoMixin:
         print("number of rows: ", self.rows)
         print("number of columns",self.columns)
         print("cellsize: ",self.cellsize)
-        print("extend in x-direction: ")
-        print("extend in y-direction: ")
-        print("maximum z-value: ")
-        print("minimum z-value: ")
-        print("z-unit: ")
+        print("extend in x-direction: ", self.columns * self.cellsize)
+        print("extend in y-direction: ", self.rows * self.cellsize)
+        print("maximum z-value: ", np.amax(self.z))
+        print("minimum z-value: ", np.amin(self.z))
+        print("z-unit: ", self.unit)
         print("georef: ", self.georef)
         

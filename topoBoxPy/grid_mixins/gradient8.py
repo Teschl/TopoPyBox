@@ -20,25 +20,29 @@ lib.gradient8.argtypes = [
 lib.gradient8.restype = None
 
 class Gradient8Mixin:
-    # später dann mit *unit damit liste von eingaben! 
-    def gradient8(self, unit="tan"):
-        # get z of object got get inputmatrix in float32
-        input_matrix = self.z
-        input_matrix = input_matrix.astype(np.float32)
+    def gradient8(self, **kwargs):
+        unit = kwargs.get("unit", "tan")
+        useblockproc = kwargs.get("useblockproc", False)
+        useparallel = kwargs.get("useparallel", False)
+        blocksize = kwargs.get("blocksize", 5000)
 
-        # get size of matrix
-        rows, cols = input_matrix.shape
-
-        # make outputmatrix (filled with zeros)
-        output_matrix = np.zeros_like(input_matrix)
-
-        # generate unit for calculation
+        # Unit: str -> int
         units = {"tan": 0,
                  "rad": 1,
                  "deg": 2,
                  "sin": 3,
                  "per": 4 }
         unit = units[unit]
+
+        # DEM.z is the input_matrix
+        input_matrix = self.z
+        input_matrix = input_matrix.astype(np.float32)
+
+        # get size of input_matrx (same for output)
+        rows, cols = input_matrix.shape
+
+        # generate output_matrix (filled with zeros)
+        output_matrix = np.zeros_like(input_matrix)
 
         # get distance between cells
         distance = self.cellsize
