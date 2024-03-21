@@ -73,7 +73,7 @@ class ImageschsMixin:
         
         # Plotting the DEM:
         ls = LightSource(azdeg=azimuth, altdeg=altitude)
-        hillshade = ls.hillshade(self.z, vert_exag=exaggerate)
+        hillshade = ls.hillshade(self.z, vert_exag=exaggerate/self.cellsize)
 
         img = plt.imshow(self.z, cmap=colormap, interpolation='nearest')
         img_overlay = plt.imshow(hillshade,  cmap="gray", alpha=0.5)

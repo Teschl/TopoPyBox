@@ -13,7 +13,7 @@ class HillshadeMixin:
         method = kwargs.get("method", 'surfnorm')     # da von matplotlib fragwürdig?
 
         ls = LightSource(azdeg=azimuth, altdeg=altitude)
-        hillshade = ls.hillshade(self.z, vert_exag=exaggerate)
+        hillshade = ls.hillshade(self.z, vert_exag=exaggerate/self.cellsize)
 
         H = copy.copy(self)
         H.z = hillshade.copy()
